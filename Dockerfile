@@ -5,6 +5,3 @@ RUN apk add --no-cache curl
 RUN curl -LO "https://storage.googleapis.com/kubernetes-release/release/$(curl -s https://storage.googleapis.com/kubernetes-release/release/stable.txt)/bin/linux/arm/kubectl"
 RUN chmod +x ./kubectl
 RUN mv ./kubectl /usr/local/bin/kubectl
-
-ENTRYPOINT [ "kubectl" ]
-CMD [ "--help" ]
